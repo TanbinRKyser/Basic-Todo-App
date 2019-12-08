@@ -1,0 +1,11 @@
+1. Retrieve all todo data
+GET: /users/{user_name}/todos
+
+2. Delete a todo
+DELETE: /users/{user_name}/todos/{todo_id}
+
+3. Edit/Update a todo
+PUT: /users/{user_name}/todos/{todo_id}
+
+4. Create a new todo
+POST: /users/{user_name}/todos/

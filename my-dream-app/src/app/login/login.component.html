@@ -1,0 +1,18 @@
+<!-- Username : <input type="text" name="username" value="{{username}}">
+Password : <input type="password" name="password" value="{{password}}"> -->
+<h1>Login Page</h1>
+<div class="container">
+  <div class="alert alert-warning" *ngIf="invalidLogin">{{ errorMessage }}</div>
+  <BR />
+  <!-- <form (ngSubmit)="handleLogin()"> -->
+  <!-- <form (ngSubmit)="handleBasicAuthLogin()"> -->
+  <form (ngSubmit)="handleJWTAuthLogin()">
+    Username :
+    <input type="text" name="username" [(ngModel)]="username" /> Password :
+    <input type="password" name="password" [(ngModel)]="password" />
+    &nbsp;
+    <button type="submit" class="btn btn-success">
+      Login
+    </button>
+  </form>
+</div>

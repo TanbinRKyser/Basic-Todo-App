@@ -1,0 +1,28 @@
+<div class="container">
+  <br /><br />
+  <div class="container alert alert-danger" *ngIf="errorMessage">
+    <h2>Customized Error Message from Spring-Boot.</h2>
+    <b><i>{{ errorMessage }}</i></b>
+  </div>
+
+  <h1>Welcome!</h1>
+
+  <div class="container">
+    Welcome {{ name }} to angular todo app. You can manage your todos
+    <a [routerLink]="['/todos']">here</a>
+  </div>
+  <br />
+
+  <div class="container">
+    Click here to get a customized welcome message.
+    <button (click)="getWelcomeMessageWithParameter()" class="btn btn-warning">
+      Get Welcome Message
+    </button>
+  </div>
+  <br />
+
+  <div class="container alert alert-success" *ngIf="messageFromService">
+    <h2>Customized Welcome Message from Spring-Boot.</h2>
+    <b><i>{{ messageFromService }}</i></b>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<h1>My ToDo list</h1>
+
+<div class="alert alert-success" *ngIf="message">{{ message }}</div>
+
+<div class="container">
+  <table class="table">
+    <!-- <caption>Things to-do</caption> -->
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th>Target Date</th>
+        <th>Status</th>
+        <th>Update</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- similar to java : for( Todo todo: todos) -->
+      <!-- let and of is javascript keywords -->
+      <tr *ngFor="let todo of todos">
+        <td>{{ todo.description }}</td>
+        <td>{{ todo.targetDate | date }}</td>
+        <td>{{ todo.done }}</td>
+        <td>
+          <button (click)="updateTodo(todo.id)" class="btn btn-info">
+            Update
+          </button>
+        </td>
+        <td>
+          <button (click)="deleteTodo(todo.id)" class="btn btn-danger">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <BR /><BR />
+  <div class="row">
+    <button (click)="addTodo()" class="btn btn-success">
+      New ToDo
+    </button>
+  </div>
+</div>
