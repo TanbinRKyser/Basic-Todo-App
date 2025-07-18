@@ -1,4 +1,4 @@
-# Basic-Todo-App
+
 # Basic Todo App
 
 A simple, full‑stack ToDo application demonstrating an Angular front‑end and a Spring Boot back‑end.
