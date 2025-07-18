@@ -84,9 +84,9 @@ It serves as a hands‑on demonstration of a RESTful API with Spring Boot, consu
 1. In a new terminal, navigate to the front-end folder:
   cd my-dream-app
 2. Install dependencies:
-  
   npm install
-  Serve the app:
+
+3. Serve the app:
     ng serve
-3. Open your browser at http://localhost:4200
+4. Open your browser at http://localhost:4200
 
